@@ -94,9 +94,11 @@ export default function GeneratorPage() {
         >
           <div className="mb-8">
             <div className="flex items-center gap-3 mb-2">
-              <div className="p-2 bg-violet-50 rounded-lg">
-                <Sparkles className="w-5 h-5 text-violet-600" />
-              </div>
+              <img
+                src="/logo.png"
+                alt="AURA Logo"
+                className="w-10 h-10 rounded-lg"
+              />
               <h1 className="text-2xl md:text-3xl font-display font-bold text-slate-900">Создать КП</h1>
             </div>
             <p className="text-slate-500">Заполните детали, чтобы создать выигрышное предложение.</p>
@@ -111,7 +113,7 @@ export default function GeneratorPage() {
                   name="clientName"
                   value={formData.clientName}
                   onChange={handleInputChange}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500 outline-none transition-all placeholder:text-slate-400 text-slate-900"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 outline-none transition-all placeholder:text-slate-400 text-slate-900"
                   placeholder="ООО Ромашка"
                 />
               </div>
@@ -122,7 +124,7 @@ export default function GeneratorPage() {
                   name="projectName"
                   value={formData.projectName}
                   onChange={handleInputChange}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500 outline-none transition-all placeholder:text-slate-400 text-slate-900"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 outline-none transition-all placeholder:text-slate-400 text-slate-900"
                   placeholder="Редизайн сайта"
                 />
               </div>
@@ -134,7 +136,7 @@ export default function GeneratorPage() {
                 name="services"
                 value={formData.services}
                 onChange={handleInputChange}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500 outline-none transition-all placeholder:text-slate-400 h-24 resize-none text-slate-900"
+                className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 outline-none transition-all placeholder:text-slate-400 h-24 resize-none text-slate-900"
                 placeholder="UI/UX Дизайн, Frontend Разработка, SEO Оптимизация..."
               />
             </div>
@@ -147,7 +149,7 @@ export default function GeneratorPage() {
                   name="price"
                   value={formData.price}
                   onChange={handleInputChange}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500 outline-none transition-all placeholder:text-slate-400 text-slate-900"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 outline-none transition-all placeholder:text-slate-400 text-slate-900"
                   placeholder="500 000 ₽"
                 />
               </div>
@@ -158,7 +160,7 @@ export default function GeneratorPage() {
                   name="timeline"
                   value={formData.timeline}
                   onChange={handleInputChange}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500 outline-none transition-all placeholder:text-slate-400 text-slate-900"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 outline-none transition-all placeholder:text-slate-400 text-slate-900"
                   placeholder="4 недели"
                 />
               </div>
@@ -170,7 +172,7 @@ export default function GeneratorPage() {
                 name="notes"
                 value={formData.notes}
                 onChange={handleInputChange}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500 outline-none transition-all placeholder:text-slate-400 h-24 resize-none text-slate-900"
+                className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 outline-none transition-all placeholder:text-slate-400 h-24 resize-none text-slate-900"
                 placeholder="Подчеркнуть скорость и качество..."
               />
             </div>
@@ -184,7 +186,7 @@ export default function GeneratorPage() {
             <button
               onClick={generateProposal}
               disabled={isLoading}
-              className="w-full py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-bold text-lg hover:shadow-lg hover:shadow-violet-500/25 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 group"
+              className="w-full py-4 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 group"
             >
               {isLoading ? (
                 <>
@@ -212,12 +214,14 @@ export default function GeneratorPage() {
             <div className="bg-white text-slate-900 rounded-3xl shadow-2xl shadow-slate-200/50 overflow-hidden min-h-[600px] flex flex-col border border-slate-200">
               {/* Proposal Header */}
               <div className="bg-slate-900 text-white p-8 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-violet-600/20 rounded-full blur-[60px] -translate-y-1/2 translate-x-1/2" />
+                <div className="absolute top-0 right-0 w-64 h-64 bg-purple-600/20 rounded-full blur-[60px] -translate-y-1/2 translate-x-1/2" />
                 <div className="relative z-10">
                   <div className="flex justify-between items-start mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-violet-600 to-fuchsia-600 rounded-xl flex items-center justify-center shadow-lg">
-                      <span className="font-display font-bold text-xl">A</span>
-                    </div>
+                    <img
+                      src="/logo.png"
+                      alt="AURA Logo"
+                      className="w-12 h-12 rounded-xl shadow-lg"
+                    />
                     <div className="text-right">
                       <p className="text-slate-400 text-sm uppercase tracking-wider font-medium">Коммерческое предложение для</p>
                       <h2 className="text-2xl font-bold">{formData.clientName || 'Имя клиента'}</h2>
@@ -257,7 +261,7 @@ export default function GeneratorPage() {
                       <div className="flex flex-wrap gap-2">
                         {formData.services.split(',').map((service, i) => (
                           service.trim() && (
-                            <span key={i} className="px-3 py-1 bg-violet-50 text-violet-700 rounded-lg text-sm font-medium border border-violet-100">
+                            <span key={i} className="px-3 py-1 bg-purple-50 text-purple-700 rounded-lg text-sm font-medium border border-purple-100">
                               {service.trim()}
                             </span>
                           )

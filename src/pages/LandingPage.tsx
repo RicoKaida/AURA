@@ -8,8 +8,8 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-32 pb-20 lg:pt-48 lg:pb-32">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-violet-200/30 rounded-full blur-[100px]" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-fuchsia-200/30 rounded-full blur-[100px]" />
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-200/30 rounded-full blur-[100px]" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-200/30 rounded-full blur-[100px]" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -18,7 +18,7 @@ export default function LandingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-sm font-medium text-violet-600 mb-8 shadow-sm">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-sm font-medium text-purple-600 mb-8 shadow-sm">
               <Sparkles className="w-4 h-4" />
               КП на базе ИИ
             </span>
@@ -35,7 +35,7 @@ export default function LandingPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 to="/generator"
-                className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold text-lg hover:shadow-lg hover:shadow-violet-500/25 transition-all duration-300 flex items-center justify-center gap-2 group"
+                className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold text-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center justify-center gap-2 group"
               >
                 Создать КП
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -61,29 +61,29 @@ export default function LandingPage() {
 
           <div className="grid md:grid-cols-3 gap-8 relative">
             {/* Connecting Line (Desktop) */}
-            <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-slate-200/50 via-violet-200 to-slate-200/50 z-0" />
+            <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-slate-200/50 via-purple-200 to-slate-200/50 z-0" />
 
             {[
               {
                 icon: FileText,
                 title: "Ввод данных",
                 desc: "Введите данные клиента и детали проекта.",
-                color: "text-violet-600",
-                bg: "bg-violet-50",
+                color: "text-purple-600",
+                bg: "bg-purple-50",
               },
               {
                 icon: Settings,
                 title: "Условия",
                 desc: "Укажите цену, сроки и условия.",
-                color: "text-fuchsia-600",
-                bg: "bg-fuchsia-50",
+                color: "text-pink-600",
+                bg: "bg-pink-50",
               },
               {
                 icon: Zap,
                 title: "Анализ ИИ",
                 desc: "AURA мгновенно создает убедительное предложение.",
-                color: "text-indigo-600",
-                bg: "bg-indigo-50",
+                color: "text-purple-700",
+                bg: "bg-purple-100",
               },
             ].map((step, i) => (
               <motion.div
@@ -92,7 +92,7 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.2 }}
-                className="relative z-10 bg-white/80 backdrop-blur-sm border border-slate-100 p-8 rounded-3xl hover:border-violet-200 hover:shadow-xl hover:shadow-violet-500/5 transition-all group"
+                className="relative z-10 bg-white/80 backdrop-blur-sm border border-slate-100 p-8 rounded-3xl hover:border-purple-200 hover:shadow-xl hover:shadow-purple-500/5 transition-all group"
               >
                 <div className={`w-14 h-14 rounded-2xl ${step.bg} ${step.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <step.icon className="w-7 h-7" />
@@ -142,12 +142,12 @@ export default function LandingPage() {
                 whileHover={{ y: -5 }}
                 className={`relative p-8 rounded-3xl border ${
                   plan.highlight
-                    ? 'bg-white/90 backdrop-blur-sm border-violet-200 shadow-2xl shadow-violet-500/10'
+                    ? 'bg-white/90 backdrop-blur-sm border-purple-200 shadow-2xl shadow-purple-500/10'
                     : 'bg-white/60 backdrop-blur-sm border-slate-200'
                 } flex flex-col`}
               >
                 {plan.highlight && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-violet-600 text-white text-xs font-bold uppercase tracking-wider rounded-full">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-bold uppercase tracking-wider rounded-full">
                     Популярный
                   </div>
                 )}
@@ -161,7 +161,7 @@ export default function LandingPage() {
                 <ul className="space-y-4 mb-8 flex-grow">
                   {plan.features.map((feat, j) => (
                     <li key={j} className="flex items-center gap-3 text-slate-600">
-                      <CheckCircle className={`w-5 h-5 ${plan.highlight ? 'text-violet-500' : 'text-slate-400'}`} />
+                      <CheckCircle className={`w-5 h-5 ${plan.highlight ? 'text-purple-500' : 'text-slate-400'}`} />
                       {feat}
                     </li>
                   ))}
@@ -169,7 +169,7 @@ export default function LandingPage() {
                 <button
                   className={`w-full py-4 rounded-2xl font-semibold transition-all ${
                     plan.highlight
-                      ? 'bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white hover:shadow-lg hover:shadow-violet-500/25'
+                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:shadow-lg hover:shadow-purple-500/25'
                       : 'bg-slate-100 text-slate-900 hover:bg-slate-200'
                   }`}
                 >

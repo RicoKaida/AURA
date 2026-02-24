@@ -83,13 +83,13 @@ export default function NeuralBackground() {
         ctx.beginPath();
         // Радиальный градиент для эффекта тумана
         const radialGradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size * 4);
-        radialGradient.addColorStop(0, `rgba(168, 85, 247, ${p.alpha})`); // #A855F7 (violet-500)
-        radialGradient.addColorStop(1, 'rgba(168, 85, 247, 0)');
-        
+        radialGradient.addColorStop(0, `rgba(147, 51, 234, ${p.alpha})`); // #9333EA (purple-600)
+        radialGradient.addColorStop(1, 'rgba(147, 51, 234, 0)');
+
         ctx.fillStyle = radialGradient;
         // Свечение (Glow)
         ctx.shadowBlur = blurAmount;
-        ctx.shadowColor = '#A855F7';
+        ctx.shadowColor = '#9333EA';
         ctx.arc(p.x, p.y, p.size * 4, 0, Math.PI * 2);
         ctx.fill();
         ctx.shadowBlur = 0; // Сброс эффекта для линий
@@ -105,7 +105,7 @@ export default function NeuralBackground() {
             ctx.beginPath();
             // Экстремально низкая прозрачность для линий (0.05 - 0.15)
             const opacity = Math.max(0, (1 - distance / connectionDistance) * 0.15);
-            ctx.strokeStyle = `rgba(168, 85, 247, ${opacity})`;
+            ctx.strokeStyle = `rgba(147, 51, 234, ${opacity})`;
             ctx.lineWidth = 1;
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
