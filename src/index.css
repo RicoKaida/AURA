@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-aura-bg: #f8fafc; /* slate-50 */
+  --color-aura-text: #0f172a; /* slate-900 */
+  --color-aura-accent: #8b5cf6; /* violet-500 */
+  --color-aura-purple: #7c3aed; /* violet-600 */
+}
+
+body {
+  background-color: var(--color-aura-bg);
+  color: var(--color-aura-text);
+}
